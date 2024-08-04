@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body 
+{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a2c2e2);
+    background-size: 400% 400%;
+    animation: colorChange 15s ease infinite;
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+}
+
+@keyframes colorChange {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.question {
+    margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(57, 57, 57, 0.5); /* Light blue glow */
+    width: 60%; 
+    margin-left: 20%; 
+    padding: 2vw 0; 
+    border-radius: 60px; 
+    background: url('vedios/background.PNG');
+    background-color:#ffe9e9; /* Darker off-white background */
+    border: 2px solid #d0f0c0; /* Very light green border */
+    animation: neonGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(173, 216, 230, 0.5); /* Light blue glow */
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(173, 216, 230, 0.8); /* Slightly stronger glow */
+    }
+}
+
+.btn_yes,.btn_no
+{
+    padding:10px 25px; 
+    border: 3px solid black;
+    border-radius: 30px;
+    background-color: transparent; 
+    margin:10px 10px;
+
+}
+.btn_yes
+{
+    position: absolute;
+    margin-left: -10rem;
+}
+.btn_yes:hover
+{
+    font-size:1vw; 
+    background-color: black;
+    color:white;
+}

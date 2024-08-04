@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wall of Memories</title>
+  <link rel="icon" type="image/png" href="vedios/memoreis-removebg-preview-removebg-preview.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 30px 10px;
+      font-family: 'Times New Roman', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; /* Changed to allow scrolling */
+      min-height: 100vh; /* Ensure body takes up at least the full viewport height */
+      background: url('vedios/bg\ img\ 1.jpg') no-repeat center center fixed;
+
+      background-size: cover; 
+      backface-visibility: 80%;
+      color: #5a3921;
+      text-align: center;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    h1 { 
+      font-size: 3rem;
+      margin-bottom: 20px; 
+      border: 4px solid white ;
+      padding:20px;
+      border-radius: 60px;
+      color: white;
+      text-shadow: 2px 2px 4px #000; 
+
+    }
+
+    .video-container {
+      display: flex; 
+      flex-wrap: wrap;
+      justify-content: center; 
+      gap: 20px;
+      width: 90%; /* Adjusted to fit the page */
+      max-width: 1000px; /* Maximum width to prevent stretching */
+      box-sizing: border-box;
+      margin-top: 20px; /* Add margin to ensure it doesn't touch the top */ 
+  
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: calc(50% - 20px); /* Adjust width for the flex container */
+      padding-bottom: 65%; /* Adjust this to control the vertical height */
+      height: 0; 
+     
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transform: scale(0.8);
+      animation: popUp 3s forwards; 
+
+      background:url('vedios/frame.jpg'); 
+      background-repeat: no-repeat;
+      background-size: cover; 
+
+
+      
+    }
+
+    .video-wrapper:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+
+    .video-wrapper:nth-child(2) {
+      animation-delay: 1.8s;
+    } 
+
+    .video-wrapper:nth-child(3) {
+      animation-delay: 5s;
+    }
+
+    .video-wrapper:nth-child(4) {
+      animation-delay: 8s;
+    }
+
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      height: 93%;
+      object-fit: cover; /* Ensures the video covers the container */
+      border-radius: 15px;
+      transition: transform 0.5s; 
+      margin: 20px 20px; 
+ 
+    }
+
+    .video-wrapper video:hover { 
+      transform: scale(1.205);
+    } 
+
+    @keyframes popUp {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    } 
+    button{ 
+      margin-top:20px; 
+      font-size:3vw;
+      background: transparent;
+      color:white; 
+      padding:15px 15px; 
+      border:2px solid black;
+      border-radius: 30px;
+        } 
+        button:hover
+        {
+          background-color: black;
+          color:white; 
+          font-size: 3.3vw;
+          cursor:grab;
+        }
+  </style>
+</head> 
+<body> 
+  <h1>Wall of Memories</h1>
+  <audio id="background-audio" autoplay loop>
+    <source src="vedios/mm.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio> 
+  <div class="video-container">
+    <div class="video-wrapper">
+      <video autoplay muted loop> 
+        <source src="vedios/vid_1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-wrapper">
+      <video autoplay muted loop>
+        <source src="vedios/vid_2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-wrapper">
+      <video autoplay muted loop>
+        <source src="vedios/vid_3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>  
+    <div class="video-wrapper">
+      <video autoplay muted loop>
+        <source src="vedios/vid_4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div> 
+    
+   <a href="QnA.html">
+  <button>
+    Click Here
+  </button>
+</a>
+</body>
+</html>
